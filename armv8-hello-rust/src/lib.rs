@@ -6,26 +6,22 @@
 
 mod reg;
 
-// #[no_mangle]
-// pub fn puts(x: char)
-// {
-// 	// println!("{:?}", x);
-// 	unsafe { *(reg::UART_BASE as *mut u32) = x as u32};
-// }
-
 #[no_mangle]
 pub extern fn rust_main()
 {
-    // let txt = "Hworld!";
-    // for i in txt.chars()
-    // {
-    // 	// puts(i);
-    // }
-    // unsafe { *(reg::UART_BASE as *mut u64) = 'g' as u64; };
-    let addr = 0x09000000 as u32;
-    unsafe { *(addr as *mut u32) = 'g' as u32; };
+    unsafe { *(reg::UART_BASE as *mut u32) = 'H' as u32; };
+    unsafe { *(reg::UART_BASE as *mut u32) = 'e' as u32; };
+    unsafe { *(reg::UART_BASE as *mut u32) = 'l' as u32; };
+    unsafe { *(reg::UART_BASE as *mut u32) = 'l' as u32; };
+    unsafe { *(reg::UART_BASE as *mut u32) = 'o' as u32; };
+    unsafe { *(reg::UART_BASE as *mut u32) = ',' as u32; };
+    unsafe { *(reg::UART_BASE as *mut u32) = 'w' as u32; };
+    unsafe { *(reg::UART_BASE as *mut u32) = 'o' as u32; };
+    unsafe { *(reg::UART_BASE as *mut u32) = 'r' as u32; };
+    unsafe { *(reg::UART_BASE as *mut u32) = 'l' as u32; };
+    unsafe { *(reg::UART_BASE as *mut u32) = 'd' as u32; };
+    unsafe { *(reg::UART_BASE as *mut u32) = '!' as u32; };
 }
-
 
 #[lang = "eh_personality"] extern fn eh_personality() {}
 use core::panic::PanicInfo;

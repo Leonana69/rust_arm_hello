@@ -44,7 +44,6 @@ qemu: $(TARGET)
 	qemu-system-aarch64	-M virt -cpu cortex-a57	\
 						-smp 4 -m 4096 \
 						-nographic \
-						-s -S \
 						-kernel hello.elf
 
 clean:
