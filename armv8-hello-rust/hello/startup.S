@@ -23,6 +23,8 @@
 .text
 .align
 FUNCTION            defaultResetHandler
+adrp x0, stacktop
+mov sp, x0
 b rust_main
 ENDFUNC             defaultResetHandler
 
