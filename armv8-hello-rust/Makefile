@@ -2,6 +2,7 @@
 # CROSS_COMPILE ?= arm-none-eabi-
 CROSS_COMPILE ?= aarch64-linux-gnu-
 
+# PATH for aarch64-linux-gnu-gdb
 PATH := $(PATH):/home/leochan/linaro-64/bin
 SHELL := env PATH=$(PATH) /bin/bash
 
