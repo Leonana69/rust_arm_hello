@@ -16,15 +16,14 @@ mod reg;
 #[no_mangle]
 pub extern fn rust_main()
 {
-    let txt = "Hworld!";
+    // let txt = "Hworld!";
     // for i in txt.chars()
     // {
     // 	// puts(i);
     // }
     // unsafe { *(reg::UART_BASE as *mut u64) = 'g' as u64; };
-    let addr = 0x09000000 as u64;
-    unsafe { *(addr as *mut u64) = 'g' as u64; };
-    
+    let addr = 0x09000000 as u32;
+    unsafe { *(addr as *mut u32) = 'g' as u32; };
 }
 
 
