@@ -7,9 +7,9 @@ SECTIONS
 {
 	. = 0x40000000;
 	.text :
-	{*(.text)
-	KEEP(*(isr_vector))
-	  
+	{
+	*(.text)
+	KEEP(*(isr_vector))  
 	} > FLASH
 	. = STACKTOP;
 	stacktop = .;
